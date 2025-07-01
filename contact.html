@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Just Laugh About It | Contact Us</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e25;
+      color: white;
+    }
+    header {
+      background-color: #0e0e25;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: #eaf18aa3;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: url('bannerr.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 3rem;
+      overflow: hidden;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+    }
+    .hero p {
+      color: white;
+      z-index: 2;
+      margin-top: 0.5rem;
+    }
+    .hero .left-finger {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 256px;
+      z-index: 1;
+    }
+    .hero .right-hand {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 140px;
+      z-index: 1;
+    }
+    .contact-section {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 2rem 1rem;
+    }
+    .contact-section h2 {
+      color: #eaf18aa3;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .form-gif-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 280px;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #1a1a30;
+      color: white;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      padding: 1rem;
+      background-color: #eaf18aa3;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #cbd97c;
+    }
+    .callme-gif {
+      max-width: 150px;
+      width: 70%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .social-section {
+      margin: 3rem auto;
+      text-align: center;
+    }
+    .social-section h2 {
+      color: #eaf18aa3;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover img {
+      transform: scale(1.2);
+    }
+    .map-section iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      display: block;
+      margin: 2rem auto 0;
+    }
+    .map-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #eaf18aa3;
+    }
+    footer {
+      background-color: #101020;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    @media (max-width: 700px) {
+      .form-gif-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .callme-gif {
+        max-width: 80%;
+      }
+      .hero .left-finger {
+        display: none;
+      }
+      .hero .right-hand {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Just Laugh About It</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="team.html">Meet the Team</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Get in Touch With Us</h2>
+    <p>We’d love to hear from you, whether it’s feedback, suggestions, or you want to join the team!</p>
+    <p>Don’t hesitate to contact us by filling in the form below!</p>
+    <img src="yeamoji2.gif" alt="Finger GIF" class="left-finger" />
+    <img src="yeamoji.gif" alt="Hand GIF" class="right-hand" />
+  </section>
+  <section class="contact-section">
+    <h2>Send Us a Message</h2>
+    <div class="form-gif-container">
+      <form action="https://formspree.io/f/xldnpyoy" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <img src="callme.gif" alt="Call Me GIF" class="callme-gif" />
+    </div>
+  </section>
+  <section class="social-section">
+    <h2>Connect With Us</h2>
+    <div class="social-icons">
+      <a href="#" target="_blank" aria-label="Instagram">
+        <img src="insta.jpeg" alt="Instagram" />
+      </a>
+      <a href="#" target="_blank" aria-label="Facebook">
+        <img src="facebook.png" alt="Facebook" />
+      </a>
+      <a href="#" target="_blank" aria-label="Twitter">
+        <img src="twitter.png" alt="Twitter" />
+      </a>
+      <a href="#" target="_blank" aria-label="TikTok">
+        <img src="tiktok.avif" alt="TikTok" />
+      </a>
+      <a href="#" target="_blank" aria-label="YouTube">
+        <img src="youtube.avif" alt="YouTube" />
+      </a>
+    </div>
+  </section>
+  <section class="map-section">
+    <h2>Find Us Here</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.767349730019!2d28.056567775162392!3d-26.204245377076568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950ff10f2e6095%3A0xb530aa1fb5190adf!2sMaboneng!5e0!3m2!1sen!2sza!4v1750767603902!5m2!1sen!2sza"
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+  <footer>
+    &copy;2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
+  </footer>
+</body>
+</html>

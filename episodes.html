@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Just Laugh About It | Episodes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e25;
+      color: white;
+    }
+
+    header {
+      background-color: #0e0e25;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #eaf18aa3;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('bannerr.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 3rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #eaf18aa3;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      max-width: 600px;
+      color: white;
+    }
+
+    .episodes-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .episodes-section h2,
+    .audio-section h2 {
+      font-size: 2rem;
+      color: #eaf18aa3;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-grid iframe,
+    .video-grid video {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .video-grid .views {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .audio-section {
+      background-color: #1a1a30;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .audio-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .audio-item audio {
+      width: 100%;
+    }
+
+    footer {
+      background-color: #101020;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #bbb;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Just Laugh About It</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="team.html">Meet the Team</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p>Watch or listen to our latest podcast episodes below we’ve got laughs, stories, and real talk waiting for you!</p>
+  </section>
+
+  <section class="episodes-section">
+    <h2>Watch Our Episodes</h2>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/mjlTU5tKYpU" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/MA0cjjWNYY8" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/gJLbPxZ6gJI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/LGSFnpWtjf0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/-dOd3IuMclM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/JGpdunlVgAM" allowfullscreen></iframe>
+
+      <!-- Local MP4 Video with view counter -->
+      <div>
+        <video controls>
+          <source src="episode7.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="views">Views: <span id="video8-count">500</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="audio-section">
+    <h2>Prefer to Listen?</h2>
+    <div class="audio-list">
+      <div class="audio-item">
+        <p>Episode 1</p>
+        <audio controls src="episode1.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 2</p>
+        <audio controls src="episode2.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 3</p>
+        <audio controls src="audio3.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 4</p>
+        <audio controls src="audio4.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 5</p>
+        <audio controls src="audio5.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 6</p>
+        <audio controls src="audio6.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <p>Episode 7</p>
+        <audio controls src="audio7.mp3"></audio>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy;2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
+  </footer>
+
+</body>
+</html>

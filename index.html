@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just Laugh About It | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background-color: #0e0e25;
+    }
+
+    header {
+      background-color: #0e0e25;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #eaf18aa3;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('bannerr.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #eaf18aa3;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      max-width: 600px;
+    }
+
+    .hero .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero .buttons a {
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border: 2px solid #eaf18aa3;
+      background-color: #eaf18aa3;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .hero .buttons a.secondary {
+      background: transparent;
+      color: #eaf18aa3;
+    }
+
+    .hero .buttons a:hover {
+      background-color: #fff;
+      color: #0e0e25;
+      border-color: white;
+    }
+
+    .bio {
+      background-color: #1a1a30;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .bio p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .founders {
+      background: url('Knowledge_Is_Human_Homepage_Animated_Banner.gif') no-repeat center center/contain;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .founders h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .founders-photo-section {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #121232;
+    }
+
+    .founders-photo-section img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .founders-photo-section .founders-names {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .team-section {
+      background: url('6c0f9b95746151.5e9ecde69599e.gif') no-repeat center center/cover;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .team-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    .cohosts-section {
+      background-color: #1a1a30;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .cohosts-container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .cohost-card {
+      background-color: #292949;
+      padding: 2rem;
+      border-radius: 16px;
+      width: 280px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .cohost-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .cohost-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .cohost-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+      color: #eaf18aa3;
+    }
+
+    .cohost-card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .partnership-section {
+      background: url('sa flag.jpg') no-repeat center center/cover;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+
+    .partnership-section h2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .sapg-info-section {
+      background-color: #121232;
+      padding: 4rem 2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto 4rem;
+      border-radius: 12px;
+    }
+
+    .sapg-info-section img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      flex-shrink: 0;
+    }
+
+    .sapg-info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .sapg-info-section p a {
+      color: #eaf18aa3;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .sapg-info-section p a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .sapg-info-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .sapg-info-section img {
+        max-width: 150px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h2, .hero span {
+        font-size: 2rem;
+      }
+
+      .founders-photo-section .founders-names {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cohosts-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .partnership-section h2 {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+    }
+
+    footer {
+      background-color: #101020;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Just Laugh About It</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="team.html">Meet the Team</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to <span>Just Laugh About It</span></h2>
+    <p>Discover hilarious stories, real conversations, and powerful insights from our proudly South African podcast community.</p>
+    <div class="buttons">
+      <a href="episodes.html">Listen Now</a>
+      <a href="team.html" class="secondary">Meet Our Team</a>
+    </div>
+  </section>
+
+  <section class="bio">
+    <p>
+      <strong>Just Laugh About It!</strong> is a proudly South African show that brings together a diverse group of young men and women to one show, as a tell-all panel aims to entertain and inspire people to just laugh through their daily struggles and problems in order to be happier and more grateful about their lives. 😂😂🇿🇦🤣 Join this crazy and witty show full of fun and entertaining hosts that will make you laugh, smile, and change your perception on taking things too seriously! 😂😂😁
+    </p>
+  </section>
+
+  <section class="founders">
+    <h2>Meet our Founders</h2>
+  </section>
+
+  <section class="founders-photo-section">
+    <img src="Giacomo Bagnara - Illustrator and Artist.jpeg" alt="Sabelo and Lesego" />
+    <div class="founders-names">
+      <span>Sabelo & Lesego</span>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+  </section>
+
+  <section class="cohosts-section">
+    <div class="cohosts-container">
+      <div class="cohost-card">
+        <a href="team.html">
+          <img src="thato.png" alt="Thato" />
+        </a>
+        <h3>Thato</h3>
+        <p>Co-Host</p>
+      </div>
+      <div class="cohost-card">
+        <a href="team.html">
+          <img src="owethu.jpeg" alt="Owethu" />
+        </a>
+        <h3>Owethu</h3>
+        <p>Co-Host</p>
+      </div>
+      <div class="cohost-card">
+        <a href="team.html">
+          <img src="kamo.png" alt="Kamohelo" />
+        </a>
+        <h3>Kamohelo</h3>
+        <p>Co-Host</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partnership-section">
+    <h2>We are in partnership with the South African Podcaster Guild</h2>
+  </section>
+
+  <section class="sapg-info-section">
+    <img src="sapg+logo+colour-02.png" alt="South African Podcasters Guild Logo" />
+    <p>
+      <a href="https://www.sapg.co.za/" target="_blank" rel="noopener noreferrer">
+        The South African Podcasters Guild (SAPG)
+      </a> is a growing community of local podcasters committed to raising the standard and impact of podcasting across the country. Whether you're just starting out or running a professional show, the Guild offers support, resources, and connection through workshops, events, and shared knowledge.
+      With a strong focus on collaboration, ethical content creation, and accessibility, SAPG empowers creators to grow their audiences, reach new opportunities, and contribute to a thriving, diverse podcasting industry in South Africa.
+    </p>
+  </section>
+
+  <footer>
+    &copy; Copyright ©2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
+  </footer>
+
+</body>
+</html>
