@@ -171,13 +171,13 @@
       <iframe src="https://www.youtube.com/embed/-dOd3IuMclM" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/JGpdunlVgAM" allowfullscreen></iframe>
 
-      <!-- Local MP4 Video with view counter -->
+      <!-- Local MP4 Video with view counter and GA tracking -->
       <div>
-        <video controls>
+        <video id="episode7-video" controls>
           <source src="episode7.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <p class="views">Views: <span id="video8-count">500</span></p>
+        <p class="views">Views: <span id="video7-count">0</span></p>
       </div>
     </div>
   </section>
@@ -219,6 +219,26 @@
   <footer>
     &copy;2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
   </footer>
+
+  <script>
+    const video7 = document.getElementById("episode7-video");
+    const viewsCounter = document.getElementById("video7-count");
+    let views = 0;
+
+    if (video7) {
+      video7.addEventListener("play", () => {
+        views++;
+        viewsCounter.textContent = views;
+
+        // Send event to Google Analytics
+        gtag("event", "video_play", {
+          event_category: "Videos",
+          event_label: "Episode 7",
+          value: views
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>
