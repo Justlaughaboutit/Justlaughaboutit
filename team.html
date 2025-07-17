@@ -4,23 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Just Laugh About It | Meet the Team</title>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XXYBS13EK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-1XXYBS13EK');
-  </script>
-
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #0e0e25;
       color: white;
     }
+
     header {
       background-color: #0e0e25;
       padding: 1rem 2rem;
@@ -28,15 +20,23 @@
       justify-content: space-between;
       align-items: center;
     }
-    header h1 { color: #eaf18aa3; font-size: 1.5rem; }
+
+    header h1 {
+      color: #eaf18aa3;
+      font-size: 1.5rem;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
       margin-left: 2rem;
       font-weight: 500;
     }
+
     nav a:hover { text-decoration: underline; }
+
     .hero {
+      position: relative;
       height: 100vh;
       background: url('bannerr.jpg') no-repeat center center/cover;
       display: flex;
@@ -49,27 +49,45 @@
       background-color: rgba(0, 0, 0, 0.6);
       margin-bottom: 3rem;
     }
-    .hero h2 {
-      font-size: 3rem;
-      font-weight: bold;
+
+    .hero img {
+      position: absolute;
+      z-index: 2;
     }
-    .hero span {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #eaf18aa3;
+
+    /* GIF placement */
+    .lesego-gif {
+      top: 30px;
+      left: 30px;
+      width: 220px;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin: 1rem 0 2rem;
-      max-width: 600px;
-      color: white;
+
+    .img4856-gif {
+      top: 30px;
+      right: 30px;
+      width: 200px;
     }
+
+    .kamo2-gif {
+      bottom: 40px;
+      right: 40px;
+      width: 240px;
+    }
+
+    .video2025-gif {
+      top: 50%;
+      left: 50%;
+      width: 280px;
+      transform: translate(-50%, -50%);
+    }
+
     h1.page-title {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 3rem;
       color: #eaf18aa3;
     }
+
     .team-container {
       max-width: 1000px;
       margin: 0 auto 4rem;
@@ -78,6 +96,7 @@
       gap: 3rem;
       padding: 0 1rem;
     }
+
     .team-member {
       display: flex;
       align-items: center;
@@ -88,42 +107,58 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.6);
       transition: transform 0.3s ease;
     }
-    .team-member:hover { transform: translateY(-8px); }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+    }
+
     .team-member img {
       width: 280px;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       flex-shrink: 0;
     }
+
     .team-member .bio {
       flex: 1;
       color: #ccc;
       font-size: 1rem;
       line-height: 1.5;
     }
+
     .team-member h2 {
       color: #eaf18aa3;
       font-size: 1.8rem;
       margin-bottom: 0.7rem;
     }
+
     .team-member:nth-child(even) {
       flex-direction: row-reverse;
       text-align: left;
     }
+
     .team-member:nth-child(odd) {
       flex-direction: row;
       text-align: left;
     }
+
     @media (max-width: 800px) {
       .team-member {
         flex-direction: column !important;
         text-align: center !important;
       }
+
       .team-member img {
         width: 100%;
         max-width: 320px;
         margin-bottom: 1rem;
+      }
+
+      .lesego-gif,
+      .img4856-gif,
+      .kamo2-gif,
+      .video2025-gif {
+        width: 150px !important;
       }
     }
 
@@ -148,56 +183,60 @@
     </nav>
   </header>
 
-  <section class="hero"></section>
+  <section class="hero">
+    <img src="Lesego.gif" alt="Lesego GIF" class="lesego-gif" />
+    <img src="IMG-4856-unscreen.gif" alt="IMG 4856" class="img4856-gif" />
+    <img src="kamo2.gif" alt="Kamo 2" class="kamo2-gif" />
+    <img src="VIDEO-2025-07-11-16-58-39-unscreen.gif" alt="Video" class="video2025-gif" />
+  </section>
 
   <h1 class="page-title">Meet the Team</h1>
 
   <div class="team-container">
-    <!-- Lesego -->
     <div class="team-member">
       <img src="lesego.png" alt="Lesego" />
       <div class="bio">
         <h2>Lesego</h2>
-        <p>Lesego Tevin Mthembu was born on the 8th of April, 1994, and raised in the vibrant heart of Soweto...</p>
+        <p>Lesego Tevin Mthembu, born in 1994 in the heart of Soweto, is a creative soul shaped by community, culture, and rhythm. From a young age, he showed leadership and dedication, actively participating in school activities like scholar patrol, soccer, and gumboot dancing. His love for music runs deep he’s especially drawn to the powerful messages of reggae and the raw storytelling of hip-hop legends like Tupac Shakur and The Notorious B.I.G. For Lesego, music is more than just sound; it’s a source of inspiration, reflection, and connection to identity and purpose.</p>
       </div>
     </div>
-    <!-- Sabelo -->
+
     <div class="team-member">
       <img src="sabelo.png" alt="Sabelo" />
       <div class="bio">
         <h2>Sabelo</h2>
-        <p>Hailing from the vibrant heart of Soweto, brings a unique blend of street smarts, humor, and heartfelt storytelling...</p>
+        <p>Hailing from the vibrant heart of Soweto, our host brings a unique blend of street smarts, humor, and heartfelt storytelling to every episode. With a natural gift for turning everyday moments into laugh-out-loud anecdotes, he’s the friend you didn’t know you needed in your earbuds. Growing up in a place rich with culture and resilience, his perspective is raw, real, and always relatable. Whether he's joking about daily struggles or reflecting on life’s deeper lessons, he’s here to help you laugh about it—because sometimes, that’s the best way to deal with it.</p>
       </div>
     </div>
-    <!-- Thato -->
+
     <div class="team-member">
       <img src="thato.png" alt="Thato" />
       <div class="bio">
         <h2>Thato</h2>
-        <p>Thato Moleko is a creative force to be reckoned with, born 1995 in the vibrant streets of White City Jabavu...</p>
+        <p>Thato Moleko is a creative force to be reckoned with, born 1995 in the vibrant streets of White City Jabavu, where he developed a passion for storytelling and the arts. He attended Panterosa Primary School and Tulip Secondary School, laying the foundation for his future pursuits. As a media enthusiast, Thato serves as an anchor for the Just Laugh About It podcast, where he leverages his passion for storytelling, presenting, music, and art. With a relentless drive and creative energy, Thato is fuelled by his passion for his craft, his enthusiasm for innovation, and a commitment to bringing fresh perspectives to his work.</p>
       </div>
     </div>
-    <!-- Owethu -->
+
     <div class="team-member">
-      <img src="owethu.jpeg" alt="Owethu" />
+      <img src="owethu.jpg" alt="Owethu" />
       <div class="bio">
         <h2>Owethu</h2>
-        <p>I'm Owethu Biyela and l'm a content creator and I believe I can change the world one curated post at a time...</p>
+        <p>Owethu Biyela is a vibrant content creator from Mandlazini, a village in Richards Bay, whose work is deeply inspired by her roots. Growing up in a community with limited access to resources, she made it her mission to challenge traditional norms and offer a bold, fresh perspective on life. Owethu brings fearless energy, humor, and heart to the podcast always ready to speak on topics others shy away from, especially around tradition, women empowerment, and youth. With a background in performing arts and film, she’s no stranger to the spotlight, having worked on major productions like Shaka iLembe and Adulting. Her goal? To inspire courage in others to dream beyond limits and embrace their power to change the world.</p>
       </div>
     </div>
-    <!-- Kamohelo -->
+
     <div class="team-member">
       <img src="kamo.png" alt="Kamohelo" />
       <div class="bio">
         <h2>Kamohelo</h2>
-        <p>Kamohelo Khalefi was born and bred in White City Jabavu Soweto I am the fourth child out of 5...</p>
+        <p>Kamohelo Khalefi, born and raised in White City Jabavu, Soweto, is the fourth of five siblings and a proud product of Morris Isaacson High School. Although naturally introverted and reserved, he brings thoughtful insights and humor to the podcast. What started as a favor to a friend turned into a passion, allowing him to share and reflect on life’s everyday struggles and lessons. A self-described “hustler,” Kamohelo connects deeply with township life and sees the podcast as a space to explore and grow beyond it. He values honest conversation, real experiences, and hopes listeners especially everyday hustlers take away meaningful lessons and laughter from each episode.</p>
       </div>
     </div>
   </div>
 
   <footer>
-    &copy; Copyright &copy;2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
+    &copy; 2025, Just Laugh About It Podcast — ALL RIGHTS RESERVED.
   </footer>
-
 </body>
 </html>
+
