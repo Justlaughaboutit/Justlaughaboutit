@@ -4,22 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Just Laugh About It | Episodes</title>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XXYBS13EK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-1XXYBS13EK');
-  </script>
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -52,6 +38,7 @@
     }
 
     .hero {
+      position: relative;
       height: 100vh;
       background: url('bannerr.jpg') no-repeat center center/cover;
       display: flex;
@@ -63,17 +50,13 @@
       background-blend-mode: overlay;
       background-color: rgba(0, 0, 0, 0.6);
       margin-bottom: 3rem;
+      overflow: hidden;
     }
 
-    .hero h2 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .hero span {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #eaf18aa3;
+    /* Ghost text animation */
+    @keyframes ghostFade {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 1; }
     }
 
     .hero p {
@@ -81,6 +64,27 @@
       margin: 1rem 0 2rem;
       max-width: 600px;
       color: white;
+      animation: ghostFade 4s ease-in-out infinite;
+      text-shadow:
+        0 0 5px rgba(255,255,255,0.6),
+        0 0 10px rgba(255,255,255,0.4),
+        0 0 15px rgba(255,255,255,0.3);
+    }
+
+    .cinema-gif {
+      position: absolute;
+      top: 180px;
+      left: 20px;
+      width: 300px;
+      z-index: 2;
+    }
+
+    .popcorn-gif {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 320px;
+      z-index: 2;
     }
 
     .episodes-section {
@@ -143,6 +147,20 @@
       color: #bbb;
       margin-top: 3rem;
     }
+
+    @media (max-width: 1000px) {
+      .cinema-gif {
+        width: 150px;
+        top: 10px;
+        left: 10px;
+      }
+
+      .popcorn-gif {
+        width: 140px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -158,7 +176,9 @@
   </header>
 
   <section class="hero">
+    <img src="Movie Theater Popcorn Sticker by Santiagoz_Arts.gif" alt="Cinema Sticker" class="cinema-gif" />
     <p>Watch or listen to our latest podcast episodes below we’ve got laughs, stories, and real talk waiting for you!</p>
+    <img src="Film Popcorn Sticker by Santiagoz_Arts.gif" alt="Popcorn Sticker" class="popcorn-gif" />
   </section>
 
   <section class="episodes-section">
@@ -170,14 +190,8 @@
       <iframe src="https://www.youtube.com/embed/LGSFnpWtjf0" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/-dOd3IuMclM" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/JGpdunlVgAM" allowfullscreen></iframe>
-
-      <!-- Local MP4 Video with view counter and GA tracking -->
-      <div>
-        <video id="episode7-video" controls>
-          <source src="episode7.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="views">Views: <span id="video7-count">50</span></p>
+      <div class="coming-soon" style="text-align:center; padding-top: 2rem;">
+        <img src="Coming Soon Podcast Sticker by Vistatec.gif" alt="Episode Coming Soon" style="max-width: 100%; height: auto;" />
       </div>
     </div>
   </section>
@@ -217,28 +231,9 @@
   </section>
 
   <footer>
-    &copy;2025, Just Laugh About It Podcast ALL RIGHTS RESERVED.
+    &copy;2025, Just Laugh About It Podcast — ALL RIGHTS RESERVED.
   </footer>
-
-  <script>
-    const video7 = document.getElementById("episode7-video");
-    const viewsCounter = document.getElementById("video7-count");
-    let views = 50;
-
-    if (video7) {
-      video7.addEventListener("play", () => {
-        views++;
-        viewsCounter.textContent = views;
-
-        // Send event to Google Analytics
-        gtag("event", "video_play", {
-          event_category: "Videos",
-          event_label: "Episode 7",
-          value: views
-        });
-      });
-    }
-  </script>
 
 </body>
 </html>
+
